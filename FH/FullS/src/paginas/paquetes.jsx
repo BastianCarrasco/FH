@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 function Paquetes() {
   const paquetes = [
@@ -62,9 +62,3 @@ function Paquetes() {
 }
 
 export default Paquetes;
-
-
-
-
-
-

@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import './App.css';
 import Navbar from './navbar';
 import Paquetes from './paginas/paquetes'; // Importa el componente Paquetes
-
+import Home from './paginas/Home';
+import Hardware from './paginas/hardware';
 function App() {
   // Estado para la página actual
   const [currentPage, setCurrentPage] = useState('home');
@@ -16,11 +17,13 @@ function App() {
   const renderContent = () => {
     switch (currentPage) {
       case 'home':
-        return <div>Contenido de la página de Inicio</div>;
+        return <Home />;
       case 'paquetes':
         return <Paquetes />; // Renderiza el componente Paquetes
       case 'compania':
         return <div>Contenido de la página de Compañía</div>;
+      case 'hardware':
+        return <Hardware />;
       default:
         return null;
     }
@@ -37,6 +40,3 @@ function App() {
 }
 
 export default App;
-
-
-
