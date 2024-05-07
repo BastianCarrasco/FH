@@ -4,6 +4,7 @@ import Navbar from './navbar';
 import Paquetes from './paginas/paquetes'; // Importa el componente Paquetes
 import Home from './paginas/Home';
 import Hardware from './paginas/hardware';
+import Compania from './paginas/compañia';
 function App() {
   // Estado para la página actual
   const [currentPage, setCurrentPage] = useState('home');
@@ -21,7 +22,7 @@ function App() {
       case 'paquetes':
         return <Paquetes />; // Renderiza el componente Paquetes
       case 'compania':
-        return <div>Contenido de la página de Compañía</div>;
+        return  <Compania />;
       case 'hardware':
         return <Hardware />;
       default:
