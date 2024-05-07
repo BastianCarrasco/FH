@@ -43,8 +43,8 @@ function Hardware() {
 
   // Función para renderizar la tabla
   const renderTable = (data) => (
-    <table>
-      <thead>
+    <table style={{maxWidth: '100%'}}>
+      <thead style={{maxWidth: '100%'}}>
         <tr>
           <th>Nombre</th>
           <th>Marca</th>
@@ -66,7 +66,7 @@ function Hardware() {
   );
 
   return (
-    <div style={{marginTop:"60px", textAlign:"left",fontSize:"24px"}}>
+    <div style={{marginTop:"60px", textAlign:"left",fontSize:"24px", maxWidth: '100%'}}>
       <h2>Impresoras Térmicas</h2>
       {renderTable(impresorasTermicas)}
 

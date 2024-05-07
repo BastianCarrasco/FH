@@ -195,3 +195,35 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer h1 {
+  margin: 0;
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 10px;
+}
+
+.footer-info p {
+  margin: 0;
+}
