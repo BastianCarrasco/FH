@@ -1,26 +1,36 @@
 import React from 'react';
+import pymeimg from '../assets/pyme.png'
 
 function Compania() {
   return (
-    <div style={{ width: '100%', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
-      <h1 style={{ textAlign: 'center', marginBottom: '20px' }}>FULL$STOCK</h1>
-      <div style={{ textAlign: 'left', maxWidth: '100%', fontSize:"26px" }}>
-        <p><strong>Dirección:</strong> 123 Calle Ficticia, Ciudad Imaginaria, País Inventado</p>
-        <p><strong>Teléfono:</strong> +123 456 789</p>
-        <p><strong>Email:</strong> info@fullstock.com</p>
-        <p><strong>Horario de atención:</strong> Lunes a Viernes: 9am - 5pm</p>
-        <p><strong>Descripción:</strong> FULL$STOCK fue fundada en el año 2024 con la visión de abordar los desafíos que enfren
-tan las pequeñas empresas en la gestión de inventarios y facturación. La idea surgió de la
- experiencia personal de los fundadores, quienes observaron la falta de soluciones accesibles
- y prácticas en el mercado para este segmento empresarial. Desde entonces, hemos traba
-jado para desarrollar y perfeccionar nuestro producto, enfocándonos en la accesibilidad,
- la colaboración, la adaptabilidad, la eficiencia y la fiabilidad como pilares fundamentales
- de la empresa.</p>
-        <p><strong>Misión:</strong> Nuestra misión es ayudar a nuestros clientes a optimizar sus operaciones comerciales mediante soluciones de punto de venta innovadoras y confiables.</p>
-        <p><strong>Visión:</strong> Nos esforzamos por ser líderes en la industria de sistemas de punto de venta, ofreciendo productos y servicios de la más alta calidad que superen las expectativas de nuestros clientes.</p>
+    <div>
+      <section>
+      <div className="flex h-screen w-full items-center justify-center flex-col bg-fondo">
+      <h1 className="text-6xl mb-6 font-montserrat text-white">Tu negocio en buenas manos</h1>
+          <p className="text-2xl text-white font-poppins mb-4">Soluciones tecnológicas para pequeñas empresas</p>
       </div>
+      </section>
+
+      <section>
+      <div className="flex h-screen w-full bg-fondo-light">
+        <div className="w-1/2 flex items-center justify-center">
+            <img src={pymeimg} />
+        </div>
+
+        <div className="w-1/2 flex flex-col justify-center items-start p-12 text-white">
+          <h1 className="text-xl font-montserrat text-white mb-5">Fundada en 2024, FULL$STOCK se dedica a resolver los desafíos de gestión de inventarios y facturación de las pequeñas empresas. Nacida de la experiencia de sus fundadores, la empresa se esfuerza por ofrecer soluciones accesibles y eficientes, con un enfoque en la accesibilidad, colaboración, adaptabilidad y fiabilidad.</h1>
+          <p className="text-m mb-5 font-poppins text-white">
+          Nuestra misión es ayudar a nuestros clientes a optimizar sus operaciones comerciales mediante soluciones de punto de venta innovadoras y confiables.</p>
+          <p className="text-m font-poppins text-white">
+          Nos esforzamos por ser líderes en la industria de sistemas de punto de venta, ofreciendo productos y servicios de la más alta calidad que superen las expectativas de nuestros clientes.
+          </p>
+        </div> 
+      </div>
+      </section>
+      
     </div>
   );
 }
+
 
 export default Compania;
