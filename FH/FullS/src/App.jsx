@@ -5,7 +5,7 @@ import Paquetes from './paginas/paquetes'; // Importa el componente Paquetes
 import Home from './paginas/Home';
 import Hardware from './paginas/hardware';
 import Compania from './paginas/compañia';
-import Features2 from './paginas/features.jsx';
+import Features from './paginas/features';
 
 function App() {
   // Estado para la página actual
@@ -28,7 +28,7 @@ function App() {
       case 'hardware':
         return <Hardware />;
       case 'caracteristicas':
-        return <Features2 />;
+        return <Features />;
       default:
         return null;
     }
@@ -73,7 +73,7 @@ function App() {
               <p className="font-poppins text-white">Horario de atención: Lunes a Viernes de 9am a 5pm</p>
             </div>
           </div>
-
+          
         </div>
       </footer>
     </div>
