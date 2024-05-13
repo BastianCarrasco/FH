@@ -43,22 +43,22 @@ function Hardware() {
 
   // Función para renderizar la tabla
   const renderTable = (data) => (
-    <table style={{maxWidth: '100%'}}>
-      <thead style={{maxWidth: '100%'}}>
+    <table className="table-auto w-full mb-8">
+      <thead>
         <tr>
-          <th>Nombre</th>
-          <th>Marca</th>
-          <th>Precio</th>
-          <th>Tienda</th>
+          <th className="px-4 py-2">Nombre</th>
+          <th className="px-4 py-2">Marca</th>
+          <th className="px-4 py-2">Precio</th>
+          <th className="px-4 py-2">Tienda</th>
         </tr>
       </thead>
       <tbody>
         {data.map((item, index) => (
-          <tr key={index}>
-            <td>{item.nombre}</td>
-            <td>{item.marca}</td>
-            <td>{item.precio}</td>
-            <td>{item.tienda}</td>
+          <tr key={index} className={index % 2 === 0 ? 'bg-gray-200' : ''}>
+            <td className="border px-4 py-2">{item.nombre}</td>
+            <td className="border px-4 py-2">{item.marca}</td>
+            <td className="border px-4 py-2">{item.precio}</td>
+            <td className="border px-4 py-2">{item.tienda}</td>
           </tr>
         ))}
       </tbody>
@@ -66,14 +66,17 @@ function Hardware() {
   );
 
   return (
-    <div style={{marginTop:"60px", textAlign:"left",fontSize:"24px", maxWidth: '100%'}}>
-      <h2>Impresoras Térmicas</h2>
+    <div className="p-20 mt-5 bg-slate-100">
+      <h1 className="text-xl font-montserrat mb-4 text-center">Importante: No nos hacemos cargo de la compra de hardware, solo de la instalación.</h1>
+      <h1 className="text-2xl font-montserrat mb-4 text-center">Aquí encontrarás una lista de dispositivos compatibles.</h1>
+      
+      <h2 className="text-2xl font-bold mb-4 mt-10">Impresoras Térmicas</h2>
       {renderTable(impresorasTermicas)}
 
-      <h2>Monitores</h2>
+      <h2 className="text-2xl font-bold mb-4">Monitores</h2>
       {renderTable(monitores)}
 
-      <h2>Tablets</h2>
+      <h2 className="text-2xl font-bold mb-4">Tablets</h2>
       {renderTable(tablets)}
     </div>
   );

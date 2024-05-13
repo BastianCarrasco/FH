@@ -1,29 +1,6 @@
 
 
 function Paquetes() {
-  const paquetes = [
-    {
-      id: 1,
-      nombre: "Free",
-      descripcion: "Descarga la versión de prueba de la aplicación. La cual permite ver y manejar limitadamente la aplicación.",
-      precio: "Gratis",
-      imagen: "paqueteA.jpg"
-    },
-    {
-      id: 2,
-      nombre: "Aplicación de Escritorio",
-      descripcion: "Descarga la app completa del software. Con control y manejo de la base de datos.",
-      precio: "$70",
-      imagen: "paqueteB.jpg"
-    },
-    {
-      id: 3,
-      nombre: "Aplicación de Escritorio Personalizado + Hardware",
-      descripcion: "Descarga la app completa del software personalizado para el cliente. Con control y manejo de la base de datos e instalación de hardware (impresora, tablet y conexión a dispositivos remotos como celulares y tablets).",
-      precio: "Personalizado",
-      imagen: "paqueteC.jpg"
-    }
-  ];
 
   const handleDownload = (nombreZip) => {
     // Crear un Blob vacío
@@ -40,23 +17,61 @@ function Paquetes() {
   };
 
   return (
-    <div className="paquetes-container">
-      <h2>Catálogo de Paquetes</h2>
-      <div className="paquetes-grid">
-        {paquetes.map(paquete => (
-          <div key={paquete.id} className="paquete-card" onClick={() => handleDownload(paquete.nombre)}>
-            <div className="paquete-placeholder">
-              <div className="dibujo-placeholder"></div>
-            </div>
-            <img src={paquete.imagen} alt={paquete.nombre} className="paquete-imagen" />
-            <div className="paquete-info">
-              <h3 className="paquete-nombre">{paquete.nombre}</h3>
-              <p className="paquete-descripcion">{paquete.descripcion}</p>
-              <p className="paquete-precio">{paquete.precio}</p>
-            </div>
-          </div>
-        ))}
+    <div> 
+      <div className="flex h-screen w-full bg-fondo justify-center items-center space-x-5">
+      
+      <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col">
+        <div className="mb-4">
+          <span className="block text-gray-700 text-xl mb-2 font-montserrat">Paquete de Prueba</span>
+          <span className="block text-gray-500 text-xl mb-2 font-poppins">$0</span>
+        </div>
+        <ul className="mb-4 text-sm text-gray-600 font-poppins">
+          <li className="mb-2">Descarga la versión de prueba de la aplicación.</li>
+          <li className="mb-2">Utiliza el software durante <strong>7 días</strong>. </li>
+          <li className="mb-2">Solo para una tienda.</li>
+        </ul>
+        <button className="bg-orange-400 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded">
+          Obtener
+        </button>
       </div>
+
+      <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col">
+        <div className="mb-4">
+          <span className="block text-gray-700 text-xl mb-2 font-montserrat">Aplicación de Escritorio</span>
+          <span className="block text-gray-500 text-xl mb-2 font-poppins">$29.990/mes</span>
+        </div>
+        <ul className="mb-4 text-sm text-gray-600 font-poppins">
+          <li className="mb-2">Descarga la aplicación completa del software.</li>
+          <li className="mb-2">Tiendas ilimitadas.</li>
+          <li className="mb-2">Usuarios ilimitados.</li>
+        </ul>
+        <button className="bg-orange-400 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded">
+          Comprar paquete
+        </button>
+      </div>
+
+      <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col">
+        <div className="mb-4">
+          <span className="block text-gray-700 text-xl mb-2 font-montserrat">Aplicación de Escritorio <br/>+ Instalación de Hardware</span>
+          <span className="block text-gray-500 text-xl mb-2 font-poppins">$39.000/primer mes y luego 29.990/mes</span>
+        </div>
+        <ul className="mb-4 text-sm text-gray-600 font-poppins">
+          <li className="mb-2">Descarga la aplicación completa del software.</li>
+          <li className="mb-2">Tiendas ilimitadas.</li>
+          <li className="mb-2">Usuarios ilimitados.</li>
+          <li className="mb-2">Con instalación de hardware y conexión a dispositivos remotos.</li>
+          
+        </ul>
+        <button className="bg-orange-400 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded">
+          Comprar paquete
+        </button> 
+        <p className="text-gray-700 text-sm pt-4 font-poppins">Importante: No nos hacemos cargo de la compra de hardware <br/> solo de la instalación.</p>
+      </div>
+      
+       
+    </div>
+    
+
     </div>
   );
 }
