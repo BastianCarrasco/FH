@@ -18,7 +18,7 @@ function Paquetes() {
 
   return (
     <div> 
-      <div className="flex h-screen w-full bg-fondo justify-center items-center space-x-5">
+      <div className="flex h-screen w-full bg-fondo justify-center items-center space-x-5 mt-10">
       
       <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col">
         <div className="mb-4">

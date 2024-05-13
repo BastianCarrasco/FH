@@ -1,14 +1,17 @@
 import React from 'react';
 import pymeimg from '../assets/pyme.png'
+import flechita from '../assets/icons8-down-96.png'
 
 function Compania() {
   return (
     <div>
-      <section>
-      <div className="flex h-screen w-full items-center justify-center flex-col bg-fondo">
-      <h1 className="text-6xl mb-6 font-montserrat text-white">Tu negocio en buenas manos</h1>
+      <section className="bg-fondo h-screen">
+        <div className="flex h-screen w-full items-center justify-center flex-col mt-10">
+          <h1 className="text-6xl mb-6 font-montserrat text-white mt-10">Tu negocio en buenas manos</h1>
           <p className="text-2xl text-white font-poppins mb-4">Soluciones tecnológicas para pequeñas empresas</p>
-      </div>
+          <img className="w-12 h-12" src={flechita}/> 
+        </div>
+        
       </section>
 
       <section>
@@ -24,7 +27,8 @@ function Compania() {
           <p className="text-m font-poppins text-white">
           Nos esforzamos por ser líderes en la industria de sistemas de punto de venta, ofreciendo productos y servicios de la más alta calidad que superen las expectativas de nuestros clientes.
           </p>
-        </div> 
+        </div>
+       
       </div>
       </section>
       
