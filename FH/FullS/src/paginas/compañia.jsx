@@ -5,13 +5,6 @@ function Compania() {
   return (
     <div>
       <section>
-      <div className="flex h-screen w-full items-center justify-center flex-col bg-fondo">
-      <h1 className="text-6xl mb-6 font-montserrat text-white">Tu negocio en buenas manos</h1>
-          <p className="text-2xl text-white font-poppins mb-4">Soluciones tecnológicas para pequeñas empresas</p>
-      </div>
-      </section>
-
-      <section>
       <div className="flex h-screen w-full bg-fondo-light">
         <div className="w-1/2 flex items-center justify-center">
             <img src={pymeimg} />
