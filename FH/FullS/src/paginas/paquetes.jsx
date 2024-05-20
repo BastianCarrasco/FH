@@ -1,4 +1,4 @@
-
+import React from 'react';
 
 function Paquetes() {
 
@@ -10,16 +10,16 @@ function Paquetes() {
     // Crear un enlace temporal y hacer clic en él para descargar
     const link = document.createElement('a');
     link.href = url;
-    link.download = nombreZip; // Utiliza el nombre proporcionado para el archivo ZIP
+    link.download = nombreZip + '.zip'; // Agregar la extensión .zip al nombre del archivo
     link.click();
     // Liberar la URL del Blob
     URL.revokeObjectURL(url);
   };
 
   return (
-    <div> 
+    <div>
       <div className="flex h-screen w-full bg-fondo justify-center items-center space-x-5">
-      
+
       <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col">
         <div className="mb-4">
           <span className="block text-gray-700 text-xl mb-2 font-montserrat">Paquete de Prueba</span>
@@ -30,7 +30,7 @@ function Paquetes() {
           <li className="mb-2">Utiliza el software durante <strong>7 días</strong>. </li>
           <li className="mb-2">Solo para una tienda.</li>
         </ul>
-        <button className="bg-orange-400 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded">
+        <button onClick={() => handleDownload('Paquete_de_Prueba')} className="bg-orange-400 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded">
           Obtener
         </button>
       </div>
@@ -45,7 +45,7 @@ function Paquetes() {
           <li className="mb-2">Tiendas ilimitadas.</li>
           <li className="mb-2">Usuarios ilimitados.</li>
         </ul>
-        <button className="bg-orange-400 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded">
+        <button onClick={() => handleDownload('Aplicacion_de_Escritorio')} className="bg-orange-400 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded">
           Comprar paquete
         </button>
       </div>
@@ -60,17 +60,17 @@ function Paquetes() {
           <li className="mb-2">Tiendas ilimitadas.</li>
           <li className="mb-2">Usuarios ilimitados.</li>
           <li className="mb-2">Con instalación de hardware y conexión a dispositivos remotos.</li>
-          
+
         </ul>
-        <button className="bg-orange-400 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded">
+        <button onClick={() => handleDownload('Aplicacion_de_Escritorio_con_Hardware')} className="bg-orange-400 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded">
           Comprar paquete
-        </button> 
+        </button>
         <p className="text-gray-700 text-sm pt-4 font-poppins">Importante: No nos hacemos cargo de la compra de hardware <br/> solo de la instalación.</p>
       </div>
-      
-       
+
+
     </div>
-    
+
 
     </div>
   );

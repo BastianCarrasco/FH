@@ -1,5 +1,6 @@
 import React from 'react';
 import ipad_img from '../assets/iPad Pro 2020.png';
+import VoiceRecognition from '../voz/VOX';
 
 function Home() {
   return (
@@ -11,11 +12,18 @@ function Home() {
           <p className="text-2xl font-poppins mb-4">Soluciones tecnológicas para pequeñas empresas</p>
           {/* DEBE LLEVAR AL MISMO CARACTERISTICAS DEL NAVBAR */}
           <a href="/caracteristicas" className="text-orange-400 font-montserrat text-xl hover:text-orange-600">Más información →</a>
-        </div> 
+        </div>
+
+
         <div className="w-1/2 flex items-center justify-center">
         <img src={ipad_img} alt="Imagen de ipad" />
         </div>
       </div>
+
+      <div className="App">
+      <h1>Reconocimiento de Voz</h1>
+      <VoiceRecognition />
+    </div>
       </section>
     </div>
   );
