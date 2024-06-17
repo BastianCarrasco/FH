@@ -1,0 +1,6 @@
+.caja-container {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-width: 1200px; /* Ejemplo de ancho máximo */
+    margin: 0 auto; /* Centrar en la página */
+    padding: 20px;
+  }
